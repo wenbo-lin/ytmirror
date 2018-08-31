@@ -35,22 +35,26 @@
     -moz-transform:rotateY(180deg);}
 </style>
 <body>
-    <div id='yt-input' class="uk-background-default">
-        
-        <span style="font-size: 1.5em; font-weight: bold;"><span uk-icon="icon: play-circle"></span> Mirror + <span uk-icon="icon: refresh"></span> Loop</span> | Enter YouTube Video ID (e.g., https://www.youtube.com/watch?v=<strong>jOJbXvjZ-cQ</strong>)
-        <form name ="video-url">
-                Youtube Video ID
-                <input class= "uk-input uk-form-width-small" type="text" id="video-url" name="video-url" size="15" placeholder="jOJbXvjZ-cQ">
+    <div class="uk-container">
+        <div id='yt-input' class="uk-background-default">
+            
+            <span style="font-size: 1.5em; font-weight: bold;"><span uk-icon="icon: play-circle"></span> Mirror + <span uk-icon="icon: refresh"></span> Loop</span> | Enter YouTube Video ID (e.g., https://www.youtube.com/watch?v=<strong>jOJbXvjZ-cQ</strong>)
+            <form name ="video-url">
+                    Youtube Video ID
+                    <input class= "uk-input uk-form-width-small" type="text" id="video-url" name="video-url" size="15" placeholder="jOJbXvjZ-cQ">
 
-                Set Start & End Time
-                <input class= "uk-input uk-form-width-small" type="text" id="video-start" name="video-start" size="5" placeholder="00:00"> :
-                <input class= "uk-input uk-form-width-small" type="text" id="video-end" name="video-end" size="5" placeholder="00:00"> 
-                <input class="uk-button uk-button-primary uk-button-small" type="submit" name="Submit" value = "Submit">
-                <button class="uk-button uk-button-danger uk-button-small" type="button" id="mirror-control" onClick="removeMirror()">Mirror</button>
-        </form>
+                    Set Start & End Time
+                    <input class= "uk-input uk-form-width-small" type="text" id="video-start" name="video-start" size="5" placeholder="00:00"> :
+                    <input class= "uk-input uk-form-width-small" type="text" id="video-end" name="video-end" size="5" placeholder="00:00"> 
+                    <button class="uk-button uk-button-primary uk-button-small" type="button" onClick="getVideoID()">Submit</button>
+                    <button class="uk-button uk-button-danger uk-button-small" type="button" id="mirror-control" onClick="removeMirror()">Mirror</button>
+            </form>
+        </div>
     </div>
     <div id="player"></div>
-    <div id="notes" style="font-size: 1em">Video mirroring is done via CSS transformation. Full screen mode is not supported. | <em>Built for my fellow dancers.</em> | <strong>Built by <a href="https://github.com/Shukichi">Shukichi (WL)</a></strong></div>
+    <div class="uk-container">
+        <div id="notes" style="font-size: 1em">Video mirroring is done via CSS transformation. Full screen mode is not supported. | <em>Built for my fellow dancers.</em> | <strong>Built by <a href="https://github.com/Shukichi">Shukichi (WL)</a></strong></div>
+    </div>
     <script>
         //
         document.getElementById('yt-input').addEventListener('submit', getVideoID);
