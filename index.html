@@ -37,10 +37,10 @@
 <body>
     <div id='yt-input' class="uk-background-default">
         
-        <span style="font-size: 1.5em; font-weight: bold;"><span uk-icon="icon: play-circle"></span> Mirror + <span uk-icon="icon: refresh"></span> Loop</span> | Enter YouTube Video ID (e.g., https://www.youtube.com/watch?v=<strong>jOJbXvjZ-cQ</strong>)
+        <span style="font-size: 1.5em; font-weight: bold;"><span uk-icon="icon: play-circle"></span> Mirror + <span uk-icon="icon: refresh"></span> Loop</span> | Enter YouTube Video ID (e.g., https://www.youtube.com/watch?v=<strong>FJfPp8OU0Ak</strong>)
         <form name ="video-url">
                 Youtube Video ID
-                <input class= "uk-input uk-form-width-small" type="text" id="video-url" name="video-url" size="15" placeholder="jOJbXvjZ-cQ">
+                <input class= "uk-input uk-form-width-small" type="text" id="video-url" name="video-url" size="15" placeholder="FJfPp8OU0Ak">
 
                 Set Start & End Time
                 <input class= "uk-input uk-form-width-small" type="text" id="video-start" name="video-start" size="5" placeholder="00:00"> :
@@ -65,11 +65,11 @@
 
         var startSeconds, endSeconds;
         var playSpeed = 1;
-        var videoId = 'jOJbXvjZ-cQ';
+        var videoId = 'FJfPp8OU0Ak';
         
         function changeSpeed(){
             playSpeed = document.getElementById('speed-control').value;
-            player.setPlaybackRate(playSpeed);
+            player.setPlaybackRate(parseFloat(playSpeed));
         }
 
 
